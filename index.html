@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suja K · B.Com Graduate Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F0; --surface:#FFFFFF; --ink:#1C2620; --muted:#58645B; --sage:#4E6A52; --sage-soft:#DCE6DA; --gold:#C98A1B; --line:#C9D3C7;
+  --display:'Bricolage Grotesque',Georgia,sans-serif; --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141A16;--surface:#1D2620;--ink:#EAF0E8;--muted:#A3B0A5;--sage:#8FB694;--sage-soft:#26332A;--gold:#E3B04D;--line:#34433A;}}
+:root[data-theme="dark"]{--bg:#141A16;--surface:#1D2620;--ink:#EAF0E8;--muted:#A3B0A5;--sage:#8FB694;--sage-soft:#26332A;--gold:#E3B04D;--line:#34433A;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-.02em}
+
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font-family:var(--display);font-size:1.15rem;margin-right:auto;color:var(--sage)}
+nav a{text-decoration:none;font-size:.95rem;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+
+/* hero: ledger paper */
+.hero{padding:84px 0 72px;background-image:repeating-linear-gradient(to bottom,transparent 0 47px,var(--line) 47px 48px);background-position:0 12px;border-bottom:1px solid var(--line);position:relative}
+.hero::before{content:"";position:absolute;left:max(24px,calc(50% - 520px - 28px));top:0;bottom:0;width:2px;background:var(--gold);opacity:.55}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(5rem,22vw,13rem);font-weight:800;line-height:.82;color:var(--sage);animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span{color:var(--ink)}
+.hero p.role{font:500 clamp(1.2rem,3vw,1.7rem)/1.3 var(--display);margin:28px 0 12px;background:var(--bg);display:inline-block;padding:2px 10px 2px 0}
+.hero p.sub{max-width:34rem;color:var(--muted);margin:0 0 28px;background:var(--bg);padding:6px 10px 6px 0}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--sage);transition:transform .15s}
+.btn.main{background:var(--sage);color:var(--bg)}
+.btn.alt{background:var(--bg);color:var(--sage)}
+.btn:hover{transform:translateY(-2px)}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+
+section{padding:76px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:34px;color:var(--ink)}
+section h2::after{content:"";display:block;width:64px;height:5px;background:var(--sage);margin-top:14px;border-radius:3px}
+.grid{display:grid;gap:40px;grid-template-columns:1fr}
+@media(min-width:820px){.two{grid-template-columns:1.1fr .9fr}}
+
+.lead{font-size:1.2rem;max-width:36rem}
+.facts{display:grid;gap:14px;align-content:start}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.fact big{display:block;font:800 2.4rem/1 var(--display);color:var(--sage)}
+.fact small{color:var(--muted);font-size:.95rem}
+
+/* timeline: education is a true sequence */
+.tl{list-style:none;margin:0;padding:0 0 0 28px;border-left:3px solid var(--sage-soft);display:grid;gap:30px}
+.tl li{position:relative}
+.tl li::before{content:"";position:absolute;left:-37px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--sage);border:3px solid var(--bg)}
+.tl time{font-weight:600;color:var(--gold);font-size:.95rem}
+.tl h3{font-size:1.4rem;margin:2px 0 4px}
+.tl p{margin:0;color:var(--muted)}
+
+.cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.box h3{font-size:1.35rem;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--sage-soft);color:var(--ink);padding:7px 15px;border-radius:999px;font-size:.95rem;font-weight:500}
+.chips.tools li{background:var(--sage);color:var(--bg)}
+
+.exp{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--sage);border-radius:6px 18px 18px 6px;padding:28px}
+.exp header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:10px}
+.exp h3{font-size:1.5rem}
+.exp time{font-weight:600;color:var(--gold)}
+.exp p{margin:0;max-width:42rem;color:var(--muted)}
+
+.hobby{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px}
+.hobby div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 10px;text-align:center;font:600 1.1rem var(--display)}
+.hobby span{display:block;font-size:2rem;margin-bottom:6px}
+
+.contact a.big{font:800 clamp(1.3rem,4.4vw,2.4rem)/1.2 var(--display);color:var(--sage);word-break:break-all;text-decoration-thickness:3px;text-underline-offset:6px}
+.contact ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:8px;color:var(--muted)}
+.contact ul b{color:var(--ink);font-weight:600}
+footer{padding:34px 0 50px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Suja K</b><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#interests">Interests</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Suja <span>K</span></h1>
+  <p class="role">Commerce graduate · Tally &amp; Excel · Fresher</p>
+  <p class="sub">Organised, quick to learn and comfortable with numbers. Looking for my first role in administration, accounts or office coordination.</p>
+  <div class="btns"><a class="btn main" href="#contact">Get in touch</a><a class="btn alt" href="#skills">See my skills</a></div>
+</div></header>
+
+<section id="about"><div class="wrap grid two">
+  <div>
+    <h2>About me</h2>
+    <p class="lead">I have completed my studies and I am known for organisational skills, problem-solving and a proactive mindset. I can handle multiple tasks and difficult situations calmly, and I stay motivated to reach my goals.</p>
+    <p>I enjoy learning new knowledge and skills, I adapt quickly to new places and new people, and I keep building my skills through online courses.</p>
+  </div>
+  <div class="facts">
+    <div class="fact"><big>B.Com</big><small>General, University of Madras (2022–2025)</small></div>
+    <div class="fact"><big>411/600</big><small>Higher secondary, commerce with computer applications</small></div>
+    <div class="fact"><big>2</big><small>Languages: Tamil and English</small></div>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <ol class="tl">
+    <li><time>2022 – 2025</time><h3>Bachelor of Commerce (General)</h3><p>University of Madras</p></li>
+    <li><time>2022</time><h3>Higher Secondary Education</h3><p>Commerce with Computer Applications · 411/600</p></li>
+    <li><time>2020</time><h3>Secondary Education</h3><p>Completed school-level foundation</p></li>
+  </ol>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="cols">
+    <div class="box"><h3>Technical</h3>
+      <ul class="chips tools"><li>Tally</li><li>Excel</li><li>Computer skills</li><li>Internet browsing</li><li>Full stack basics</li></ul>
+      <p style="color:var(--muted);font-size:.95rem;margin:16px 0 0">Full stack development learned through online classes.</p></div>
+    <div class="box"><h3>Professional</h3>
+      <ul class="chips"><li>Administrative efficiency</li><li>Team work &amp; coordination</li><li>Office organisation</li><li>Time management</li><li>Budget management</li><li>Schedule planning</li></ul></div>
+    <div class="box"><h3>Personal</h3>
+      <ul class="chips"><li>Communication</li><li>Positive attitude</li><li>Dependability</li><li>Problem solving</li><li>Initiative</li><li>Adaptability</li><li>Team work</li></ul></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <article class="exp">
+    <header><h3>Member, Swachh Bharat</h3><time>2022</time></header>
+    <p>As a college member of Swachh Bharat, I attended camps held at orphanages and contributed my time and effort to support them.</p>
+  </article>
+</div></section>
+
+<section id="interests"><div class="wrap">
+  <h2>Beyond work</h2>
+  <div class="hobby"><div><span>🎨</span>Painting</div><div><span>✏️</span>Drawing</div><div><span>🍳</span>Cooking</div><div><span>📺</span>Anime</div><div><span>🎵</span>Music</div></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap grid two">
+  <div>
+    <h2>Contact</h2>
+    <a class="big" href="mailto:k.suja14022005@gmail.com">k.suja14022005@gmail.com</a>
+    <ul>
+      <li><b>Phone:</b> <a href="tel:+917200444126">+91 72004 44126</a></li>
+      <li><b>Address:</b> 153rd Street, MR Nagar, Kodungaiyur</li>
+      <li><b>Languages:</b> Tamil, English</li>
+    </ul>
+  </div>
+  <div class="box"><h3>Reference</h3>
+    <p style="margin:0 0 6px"><b>CTTE College for Women</b><br>University of Madras</p>
+    <p style="margin:0;color:var(--muted)">044 2537 5753<br><a href="https://www.cttewc.edu.in" rel="noopener">www.cttewc.edu.in</a></p></div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Suja K</span><span>Open to fresher opportunities</span></div></footer>
+</body>
+</html>
